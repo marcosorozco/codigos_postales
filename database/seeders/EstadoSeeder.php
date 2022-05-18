@@ -14,6 +14,7 @@ class EstadoSeeder extends Seeder
      */
     public function run()
     {
+        ini_set('memory_limit', '-1');
         DB::table('estados')->insert([
             ['id'=>1,'descripcion'=>'Aguascalientes', 'created_at'=>now(), 'updated_at'=>now()],
             ['id'=>2,'descripcion'=>'Baja California', 'created_at'=>now(), 'updated_at'=>now()],

@@ -14,6 +14,7 @@ class MunicipioSeeder extends Seeder
      */
     public function run()
     {
+        ini_set('memory_limit', '-1');
         DB::table('municipios')->insert([
             ['id'=>1,'descripcion'=>'Abalá', 'created_at'=>now(), 'updated_at'=>now()],
             ['id'=>2,'descripcion'=>'Abasolo', 'created_at'=>now(), 'updated_at'=>now()],

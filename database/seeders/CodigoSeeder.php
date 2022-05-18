@@ -14,6 +14,7 @@ class CodigoSeeder extends Seeder
      */
     public function run()
     {
+        ini_set('memory_limit', '-1');
         $array = [
                 ['id'=>1,'codigo'=>'01000', 'created_at'=>now(), 'updated_at'=>now()],
                 ['id'=>2,'codigo'=>'01010', 'created_at'=>now(), 'updated_at'=>now()],

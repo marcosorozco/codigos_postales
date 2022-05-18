@@ -14,6 +14,7 @@ class ZonaSeeder extends Seeder
      */
     public function run()
     {
+        ini_set('memory_limit', '-1');
         DB::table('zonas')->insert([
             ['id'=>1,'descripcion'=>'Rural', 'created_at'=>now(), 'updated_at'=>now()],
             ['id'=>2,'descripcion'=>'Semiurbano', 'created_at'=>now(), 'updated_at'=>now()],

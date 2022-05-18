@@ -14,6 +14,7 @@ class AsentamientoTipoSeeder extends Seeder
      */
     public function run()
     {
+        ini_set('memory_limit', '-1');
         DB::table('asentamientos_tipos')
             ->insert([
                 ['id'=>1,'descripcion'=>'Aeropuerto', 'created_at'=>now(), 'updated_at'=>now()],

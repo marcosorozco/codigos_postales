@@ -14,6 +14,7 @@ class CiudadSeeder extends Seeder
      */
     public function run()
     {
+        ini_set('memory_limit', '-1');
         DB::table('ciudades')
             ->insert([
             ['id'=>1,'descripcion'=>'Abasolo', 'created_at'=>now(), 'updated_at'=>now()],
