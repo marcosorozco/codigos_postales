@@ -9,7 +9,7 @@ class CodigoPostalValidacion
 
     public function validarCodigoNumero(CodigoTO $codigoTO)
     {
-        if (is_string($codigoTO->getCodigo())) {
+        if (!is_numeric($codigoTO->getCodigo())) {
             throw new ValidacionException('Server Error');
         }
     }
