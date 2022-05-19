@@ -17,7 +17,7 @@ class ConvertirCodigoResumenDetalle
             'zip_code'=>$zipCode->codigo,
             'locality' => $ciudad->descripcion ?? '',
             'federal_entity' => [
-                'key' => $codigoPostal->c_estado,
+                'key' => (int)$codigoPostal->c_estado,
                 'name' => $estado->descripcion,
                 'code' => $codigoPostal->c_CP ? $codigoPostal->c_CP : null
             ],
@@ -25,7 +25,7 @@ class ConvertirCodigoResumenDetalle
                 $asentamientoTipo = $codigoPostal->asentamientoTipo;
                 $zona = $codigoPostal->zona;
                 return [
-                    "key"=> $codigoPostal->id_asenta_cpcons,
+                    "key"=> (int)$codigoPostal->id_asenta_cpcons,
                     "name" => $codigoPostal->d_asenta,
                     "zone_type"=> $zona->descripcion,
                     "settlement_type"=> [
